@@ -191,4 +191,16 @@
         <item>Penyiraman: Air tanaman salvia ketika lapisan atas tanah sudah kering. Hindari penyiraman berlebihan.\n\nCahaya: Salvia membutuhkan sinar matahari penuh selama setidaknya 6-8 jam sehari. Pastikan mendapatkan cukup cahaya matahari.\n\nPemupukan: Beri pupuk dengan dosis seimbang setiap 4-6 minggu selama musim tumbuh.\n\nPemangkasan: Potong bunga mati dan daun yang tidak diinginkan untuk merangsang pertumbuhan baru.</item>
 
     </string-array>
+
+    <string-array name="data_plant_category_name">
+        <item>Tanaman Hias</item>
+        <item>Sayuran</item>
+        <item>Buah</item>
+    </string-array>
+
+    <string-array name="data_plant_category_image">
+        <item>@drawable/potted_plant</item>
+        <item>@drawable/lettuce</item>
+        <item>@drawable/plant_tree</item>
+    </string-array>
 </resources>

@@ -71,21 +71,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/textView5"-->
-<!--        style="@style/TextHeading.SecondHeadline"-->
-<!--        android:layout_marginStart="16dp"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        android:text="@string/search_by_categories"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/ll_few_owned_plant" />-->
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/TextHeading.SecondHeadline"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/search_by_categories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_few_owned_plant" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/textView6"-->
-<!--        style="@style/TextHeadingSecondary.WeightRegular.Gray"-->
-<!--        android:text="@string/just_for_you"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/textView5"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/textView5" />-->
+    <TextView
+        android:id="@+id/textView6"
+        style="@style/TextHeadingSecondary.WeightRegular.Gray"
+        android:text="@string/just_for_you"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <LinearLayout
         android:id="@+id/ll_few_owned_plant"
@@ -94,7 +94,23 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@+id/btn_see_all_owned_plant"
         app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"></LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <HorizontalScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+        <LinearLayout
+            android:id="@+id/ll_plant_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"

@@ -10,14 +10,17 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.bumptech.glide.Glide
+import com.rulyadhika.tanamanio.model.PlantCategory
 import de.hdodenhof.circleimageview.CircleImageView
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var btnSeeAllOwnedPlant: Button
     private lateinit var llFewOwnedPlant: LinearLayout
+    private lateinit var llPlantCategory: LinearLayout
     private lateinit var btnAboutMe: Button
 
     private var listFewOwnedPlants = ArrayList<Plant>()
+    private var listPlantsCategory = ArrayList<PlantCategory>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,6 +72,24 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
             llFewOwnedPlant.addView(view)
         }
+
+        llPlantCategory = findViewById(R.id.ll_plant_category)
+        listPlantsCategory.addAll(getListPlantsCategory())
+
+        if (listPlantsCategory.size > 0) {
+            for (item in listPlantsCategory) {
+                val view = LayoutInflater.from(this@MainActivity)
+                    .inflate(R.layout.square_plant_category_card, llPlantCategory, false)
+
+                val tvPlantCategory: TextView = view.findViewById(R.id.tv_plant_category)
+                val ivPlantCategoryPicture: ImageView = view.findViewById(R.id.iv_plant_category_picture)
+
+                tvPlantCategory.text = item.categoryName
+                ivPlantCategoryPicture.setImageResource(item.categoryImage)
+
+                llPlantCategory.addView(view)
+            }
+        }
     }
 
     override fun onClick(v: View?) {
@@ -115,5 +136,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
 
         return list
+    }
+
+    private fun getListPlantsCategory() : ArrayList<PlantCategory>{
+        val dataName = resources.getStringArray(R.array.data_plant_category_name)
+        val dataImage = resources.obtainTypedArray(R.array.data_plant_category_image)
+
+        val resultArray = ArrayList<PlantCategory>()
+
+        for(i in dataName.indices){
+            val data = PlantCategory(dataName[i], dataImage.getResourceId(i,-1))
+            resultArray.add(data)
+        }
+
+        return resultArray
     }
 }

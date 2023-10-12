@@ -12,7 +12,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/my_pict"
+        tools:srcCompat="@drawable/baseline_person_24"
         app:layout_constraintBottom_toBottomOf="@+id/tv_message"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_message" />
