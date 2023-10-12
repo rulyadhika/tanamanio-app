@@ -64,25 +64,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:text="@string/see_all"
         android:drawableEnd="@drawable/baseline_chevron_right_24"
         android:drawablePadding="0dp"
+        android:text="@string/see_all"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_few_owned_plant"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
 <!--    <TextView-->
 <!--        android:id="@+id/textView5"-->
@@ -91,7 +78,7 @@
 <!--        android:layout_marginTop="20dp"-->
 <!--        android:text="@string/search_by_categories"-->
 <!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/rv_few_owned_plant" />-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/ll_few_owned_plant" />-->
 
 <!--    <TextView-->
 <!--        android:id="@+id/textView6"-->
@@ -99,6 +86,15 @@
 <!--        android:text="@string/just_for_you"-->
 <!--        app:layout_constraintStart_toStartOf="@+id/textView5"-->
 <!--        app:layout_constraintTop_toBottomOf="@+id/textView5" />-->
+
+    <LinearLayout
+        android:id="@+id/ll_few_owned_plant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/btn_see_all_owned_plant"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"></LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"

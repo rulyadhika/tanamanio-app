@@ -14,6 +14,7 @@
     <string name="search_by_categories">Cari berdasarkan kategori</string>
     <string name="just_for_you">Khusus untukmu, klik katalog yang sedang kamu cari ya</string>
     <string name="banner_image_of_plant">Banner image of plant</string>
+    <string name="dont_have_any_plants">Yah kamu belum memiliki tanaman apapun :(\nYuk cari tanaman yang sesuai dengan keinginanmu</string>
 
     <string-array name="data_name">
         <item>Mawar</item>
