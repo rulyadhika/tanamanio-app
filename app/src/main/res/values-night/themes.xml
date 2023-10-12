@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Tanamanio" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- primary brand color-->
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+</resources>

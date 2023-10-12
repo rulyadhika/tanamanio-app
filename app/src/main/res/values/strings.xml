@@ -1,0 +1,193 @@
+<resources>
+    <string name="app_name">Tanamanio</string>
+    <string name="my_name">Ruly Adhika Makarim Hanif</string>
+    <string name="my_email">rulihanif@gmail.com</string>
+    <string name="about_me">About Me</string>
+    <string name="your_plants">Tanaman Milikmu</string>
+    <string name="how_to_care">Cara Merawat</string>
+    <string name="description">Deskripsi</string>
+    <string name="greetin_my_name">Halo, Ruly</string>
+    <string name="welcome_back">Selamat Datang Kembali</string>
+    <string name="your_plant_title">Tanaman milikmu</string>
+    <string name="re_learning_your_plant">Ruly, pelajari kembali mengenai tanamanmu!</string>
+    <string name="see_all">Lihat Semua</string>
+    <string name="search_by_categories">Cari berdasarkan kategori</string>
+    <string name="just_for_you">Khusus untukmu, klik katalog yang sedang kamu cari ya</string>
+    <string name="banner_image_of_plant">Banner image of plant</string>
+
+    <string-array name="data_name">
+        <item>Mawar</item>
+        <item>Anggrek Phalaenopsis</item>
+        <item>Monstera Deliciosa</item>
+        <item>Lavender</item>
+        <item>Begonia Rex</item>
+        <item>Kalanchoe</item>
+        <item>Sansevieria</item>
+        <item>Kalathea</item>
+        <item>Echeveria</item>
+        <item>Alocasia</item>
+        <item>Pilea Peperomioides</item>
+        <item>Tomat</item>
+        <item>Jeruk</item>
+        <item>Stroberi</item>
+        <item>Salvia</item>
+    </string-array>
+
+    <!-- Nama Latin -->
+    <string-array name="data_latina_name">
+        <item>Rosa spp.</item>
+        <item>Phalaenopsis spp.</item>
+        <item>Monstera deliciosa</item>
+        <item>Lavandula spp.</item>
+        <item>Begonia rex-cultorum</item>
+        <item>Kalanchoe spp.</item>
+        <item>Sansevieria spp.</item>
+        <item>Calathea spp.</item>
+        <item>Echeveria spp.</item>
+        <item>Alocasia spp.</item>
+        <item>Pilea peperomioides</item>
+        <item>Solanum lycopersicum</item>
+        <item>Citrus sinensis</item>
+        <item>Fragaria x ananassa</item>
+        <item>Salvia officinalis</item>
+    </string-array>
+
+    <!-- Deskripsi Tanaman -->
+    <string-array name="data_description">
+        <item>
+            Mawar adalah tanaman berbunga indah yang dikenal karena aroma harumnya. Bunga mawar tersedia dalam berbagai warna dan varietas. Mawar sering digunakan dalam rangkaian bunga dan acara khusus.
+        </item>
+        <item>
+            Anggrek Phalaenopsis adalah tanaman hias berbunga dengan bunga-bunga yang cantik dan tahan lama. Mereka datang dalam berbagai warna dan varietas, menjadikannya pilihan populer di dalam ruangan.
+        </item>
+        <item>
+            Monstera Deliciosa adalah tanaman hias dengan daun besar berlobus dan lubang-lubang yang unik. Tanaman ini memberikan sentuhan tropis di dalam rumah.
+        </item>
+        <item>
+            Lavender adalah tanaman hias berbunga dengan aroma yang harum. Bunga-bunga lavender digunakan dalam berbagai produk aromaterapi, sementara daunnya berwarna abu-abu.
+        </item>
+        <item>
+            Begonia Rex adalah tanaman hias daun dengan daun berwarna-warni yang sangat dekoratif. Daun-daunnya memiliki berbagai pola dan warna.
+        </item>
+        <item>
+            Kalanchoe adalah tanaman hias berbunga dengan bunga-bunga cerah yang tahan lama. Bunga-bunga ini hadir dalam berbagai warna dan menciptakan tampilan yang memikat.
+        </item>
+        <item>
+            Sansevieria, juga dikenal sebagai lidah mertua, adalah tanaman hias daun yang tahan terhadap berbagai kondisi tumbuh. Daunnya tegak, berbentuk pedang, dan berwarna hijau gelap.
+        </item>
+        <item>
+            Kalathea adalah tanaman hias daun dengan daun yang indah dan motif yang menarik. Beberapa varietas memiliki daun dengan pola seperti marmer atau garis-garis yang kontras.
+        </item>
+        <item>
+            Echeveria adalah tanaman sukulen hias yang membentuk roset daun yang kompak. Daun-daunnya biasanya berdaging dan berwarna hijau atau biru keabuan.
+        </item>
+        <item>
+            Alocasia adalah tanaman hias daun dengan daun besar yang sering memiliki pola unik di atasnya. Tanaman ini memberikan nuansa tropis di dalam rumah.
+        </item>
+        <item>
+            Pilea Peperomioides adalah tanaman hias dengan daun bundar yang unik dan batang panjang yang menjulang. Tanaman ini memiliki penampilan yang modern dan mudah dirawat.
+        </item>
+        <item>
+            Tomat adalah tanaman sayuran yang menghasilkan buah merah yang digunakan dalam berbagai hidangan. Mereka bisa ditanam di kebun atau pot.
+        </item>
+        <item>
+            Jeruk adalah tanaman buah yang menghasilkan buah berkulit tebal dan berwarna oranye yang kaya akan vitamin C. Jeruk sering ditanam di kebun atau taman.
+        </item>
+        <item>
+            Stroberi adalah tanaman buah yang menghasilkan buah merah manis yang bisa dimakan segar atau digunakan dalam kue dan selai. Stroberi umumnya ditanam di kebun atau dalam pot.
+        </item>
+        <item>
+            Salvia adalah tanaman herbal yang digunakan dalam masakan dan obat-obatan. Daunnya aromatik dan berbagai jenis salvia digunakan di seluruh dunia.
+        </item>
+    </string-array>
+
+    <!-- Kategori Tanaman -->
+    <string-array name="data_category">
+        <item>Tanaman Hias</item>
+        <item>Tanaman Hias</item>
+        <item>Tanaman Hias</item>
+        <item>Tanaman Hias</item>
+        <item>Tanaman Hias</item>
+        <item>Tanaman Hias</item>
+        <item>Tanaman Hias</item>
+        <item>Tanaman Hias</item>
+        <item>Tanaman Hias</item>
+        <item>Tanaman Hias</item>
+        <item>Tanaman Hias</item>
+        <item>Sayuran</item>
+        <item>Tanaman Buah</item>
+        <item>Tanaman Buah</item>
+        <item>Tanaman Hias</item>
+    </string-array>
+
+    <!-- Link Foto -->
+    <string-array name="data_photo">
+        <item>https://outerbloom.com/cdn/shop/articles/7_Arti_Bunga_Mawar_Sebagai_Kado_Valentine_1024x1024.jpg</item>
+        <item>https://www.tukukembang.com/wp-content/uploads/2021/08/anggrek-bulan-lidah-merah-rangkaian-4-tangkai.jpg</item>
+        <item>https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_monstera_variant_medium_hyde_cream_50145be1-5183-4692-80ed-a927d5625fc8.jpg</item>
+        <item>https://cdn1.katadata.co.id/media/images/thumb/2022/11/23/Ilustrasi_bunga_lavender-2022_11_23-22_22_42_a411fbbdf41dd6e13feefd6246b77ce2_960x640_thumb.png</item>
+        <item>https://www.thespruce.com/thmb/Kul5xxbJ3A99kttMgjpiXehM_VQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/grow-rex-begonia-1902492-5-94396a6711614886a9bfbbca7e6a9306.jpg</item>
+        <item>https://www.bhg.com/thmb/1HEL0y6P0zuFN3Q9502HziEM7K0=/1244x0/filters:no_upscale():strip_icc()/florists-kalanchoe-e49b3ec8-01cf76b3cce04317917ed8d727a78068.jpg</item>
+        <item>https://www.ikea.com/us/en/images/products/sansevieria-trifasciata-potted-plant-mother-in-laws-tongue__0908898_pe676659_s5.jpg</item>
+        <item>https://cdn0-production-images-kly.akamaized.net/EflTSaFj-aUH1pl3Y2wpyEmOcxg=/500x667/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4267713/original/091898900_1671589738-20210220100811-1-ilustrasi-tanaman-hias-calathea-009-tantri-setyorini.jpg</item>
+        <item>https://cdnwpseller.gramedia.net/wp-content/uploads/2021/10/14202542/alocasia-amazonica-1.jpg</item>
+        <item>https://asset-a.grid.id/crop/0x0:0x0/x/photo/2021/12/04/merawat-tumbuhan-sukulenjpg-20211204113840.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Pilea_peperomioides_Chinese_money_plant.jpg/640px-Pilea_peperomioides_Chinese_money_plant.jpg</item>
+        <item>https://cf.organicbazar.net/wp-content/uploads/2021/06/Tomato-1.jpg</item>
+        <item>https://www.starkbros.com/images/dynamic/2243.jpg</item>
+        <item>https://m.media-amazon.com/images/I/61lScWdYK1L.jpg</item>
+        <item>https://balconygardenweb.b-cdn.net/wp-content/uploads/2023/05/Salvias-in-Pots.-1.jpeg</item>
+
+    </string-array>
+
+    <!-- Tingkat Kesulitan Perawatan -->
+    <string-array name="data_difficulty">
+        <item>Lumayan Sulit</item>
+        <item>Lumayan Sulit</item>
+        <item>Mudah</item>
+        <item>Mudah</item>
+        <item>Lumayan Sulit</item>
+        <item>Mudah</item>
+        <item>Mudah</item>
+        <item>Lumayan Sulit</item>
+        <item>Mudah</item>
+        <item>Lumayan Sulit</item>
+        <item>Mudah</item>
+        <item>Lumayan Sulit</item>
+        <item>Lumayan Sulit</item>
+        <item>Lumayan Sulit</item>
+        <item>Mudah</item>
+    </string-array>
+
+    <string-array name="data_how_to_care">
+        <item>Penyiraman: Air mawar secara teratur, tetapi hindari penyiraman berlebihan. Pastikan tanahnya tidak terlalu basah.\n\nCahaya: Mawar membutuhkan cahaya matahari penuh. Letakkan di tempat yang mendapat setidaknya 6-8 jam cahaya matahari langsung sehari.\n\nPemupukan: Beri pupuk mawar khusus sekitar setiap 2-3 minggu selama musim tumbuh (musim semi dan musim panas).\n\nPemangkasan: Potong bunga mati untuk merangsang pertumbuhan baru.</item>
+        <item>Penyiraman: Air anggrek ketika media tanamnya mulai terasa kering. Hindari tanah tergenang air. Gunakan air yang bersih dan lembut.\n\nCahaya: Berikan cahaya indirek terang hingga sedang. Hindari sinar matahari langsung yang dapat merusak daun dan bunga.\n\nKelembapan: Anggrek Phalaenopsis menyukai kelembapan tinggi. Gunakan semprotan air atau letakkan wadah berisi air di sekitarnya untuk meningkatkan kelembapannya.\n\nPemupukan: Beri pupuk khusus anggrek dengan kandungan nutrisi rendah setiap 2-4 minggu selama musim tumbuh.</item>
+        <item>Penyiraman: Biarkan tanah setengah kering sebelum penyiraman berikutnya. Monstera lebih tahan terhadap kekeringan daripada tanah tergenang air.\n\nCahaya: Monstera menyukai cahaya indirek terang hingga sedang. Toleransi terhadap cahaya rendah, tetapi pertumbuhan akan lebih lambat. Hindari sinar matahari langsung yang dapat membakar daunnya.\n\nPemupukan: Beri pupuk seimbang sekitar setiap 4-6 minggu selama musim tumbuh.\n\nPemangkasan: Potong cabang yang panjang atau tidak diinginkan untuk merawat bentuk tanaman yang rapi.</item>
+        <item>Penyiraman: Air tanaman dengan hati-hati dan biarkan tanah mengering sepenuhnya antara penyiraman. Lavender tidak menyukai kelembapan berlebihan.\n\nCahaya: Lavender membutuhkan sinar matahari penuh selama setidaknya 6-8 jam sehari.</item>
+
+
+        <item>Penyiraman: Air tanaman dengan hati-hati dan biarkan tanah mengering sebelum penyiraman berikutnya. Begonia Rex tidak menyukai tanah terlalu basah.\n\nCahaya: Letakkan begonia rex di tempat dengan cahaya indirek terang hingga sedang. Hindari sinar matahari langsung yang dapat merusak daunnya.\n\nKelembapan: Begonia Rex menyukai kelembapan tinggi. Pertahankan kelembapan dengan menyemprotkan air di sekitarnya atau meletakkan wadah berisi air di sekitar tanaman.\n\nPemupukan: Beri pupuk cair sekitar setiap 4-6 minggu selama musim tumbuh.\n\nPemangkasan: Potong daun yang rusak atau mati untuk menjaga penampilan yang baik.</item>
+
+        <item>Penyiraman: Air kalanchoe ketika lapisan atas tanah sudah kering. Hindari penyiraman berlebihan, yang dapat membusukkan akarnya.\n\nCahaya: Kalanchoe memerlukan cahaya matahari penuh hingga cahaya indirek terang. Pastikan mendapatkan minimal 6 jam cahaya matahari sehari.\n\nPemupukan: Beri pupuk khusus tanaman berbunga sekitar setiap 4-6 minggu selama musim tumbuh.\n\nPemangkasan: Potong bunga mati untuk merangsang pertumbuhan baru.\n\n</item>
+
+        <item>Penyiraman: Air sansevieria hanya ketika tanahnya sudah benar-benar kering. Tanaman ini tahan terhadap kekeringan.\n\nCahaya: Sansevieria dapat tumbuh baik dalam kondisi cahaya rendah hingga terang. Toleran terhadap berbagai tingkat cahaya.\n\nPemupukan: Beri pupuk cair dengan dosis rendah sekitar setiap 6-8 minggu selama musim tumbuh.\n\nPemangkasan: Potong daun yang rusak atau kusam untuk menjaga penampilan yang rapi.\n\n</item>
+
+        <item>Penyiraman: Air tanaman secara teratur sehingga tanahnya selalu lembab tetapi tidak tergenang air. Hindari tanah yang terlalu kering.\n\nCahaya: Letakkan kalathea di tempat dengan cahaya indirek terang hingga sedang. Hindari sinar matahari langsung.\n\nKelembapan: Kalathea membutuhkan kelembapan tinggi. Tingkatkan kelembapan dengan meletakkan tanaman di atas wadah berisi air atau menggunakan pelembap udara.\n\nPemupukan: Beri pupuk cair dengan dosis rendah sekitar setiap 4-6 minggu selama musim tumbuh.\n\nPemangkasan: Potong daun yang rusak atau layu untuk menjaga penampilan yang baik.</item>
+
+        <item>Penyiraman: Air echeveria ketika lapisan atas tanah sudah kering. Hindari penyiraman berlebihan, yang dapat menyebabkan akarnya membusuk.\n\nCahaya: Echeveria membutuhkan sinar matahari penuh hingga cahaya indirek terang. Pastikan mendapatkan minimal 6 jam cahaya matahari sehari.\n\nPemupukan: Beri pupuk khusus tanaman sukulen sekitar setiap 4-6 minggu selama musim tumbuh.\n\nPemangkasan: Potong daun yang rusak atau mati untuk menjaga bentuk dan kesehatan tanaman.\n\n</item>
+
+
+        <item>Penyiraman: Air Alocasia ketika lapisan atas tanah sudah kering. Hindari penyiraman berlebihan yang dapat membusukkan akarnya.\n\nCahaya: Alocasia memerlukan cahaya indirek terang hingga sedang. Hindari sinar matahari langsung yang dapat merusak daunnya.\n\nKelembapan: Jaga kelembapan dengan menyemprotkan air pada daun atau meletakkan wadah berisi air di sekitarnya.\n\nPemupukan: Beri pupuk dengan dosis rendah setiap 4-6 minggu selama musim tumbuh.\n\nPemangkasan: Potong daun yang rusak atau mati untuk menjaga penampilan yang baik.</item>
+
+        <item>Penyiraman: Air tanaman ketika lapisan atas tanah sudah kering. Jangan biarkan air tergenang di bawah pot.\n\nCahaya: Letakkan Pilea Peperomioides di tempat dengan cahaya indirek terang hingga sedang. Hindari sinar matahari langsung yang dapat merusak daunnya.\n\nPemupukan: Beri pupuk cair dengan dosis rendah sekitar setiap 4-6 minggu selama musim tumbuh.\n\nPemangkasan: Potong tunas yang panjang untuk merangsang pertumbuhan cabang baru.\n\n</item>
+
+        <item>Penyiraman: Air tomat secara teratur untuk menjaga tanah tetap lembab. Hindari menyiram tanaman di malam hari.\n\nCahaya: Tomat membutuhkan sinar matahari penuh selama setidaknya 6-8 jam sehari. Pastikan tanaman mendapatkan cukup cahaya.\n\nPemupukan: Beri pupuk dengan dosis seimbang setiap 2-3 minggu selama musim tumbuh.\n\nPemangkasan: Potong tunas yang tidak diinginkan dan daun yang terlalu berlebihan untuk mempromosikan pertumbuhan buah.\n\n</item>
+
+        <item>Penyiraman: Air tanaman jeruk secara teratur, tetapi biarkan lapisan atas tanah mengering sebelum penyiraman berikutnya.\n\nCahaya: Jeruk membutuhkan cahaya matahari penuh hingga cahaya indirek terang. Pastikan tanaman mendapatkan setidaknya 6 jam cahaya matahari sehari.\n\nPemupukan: Beri pupuk dengan dosis seimbang setiap 4-6 minggu selama musim tumbuh.\n\nPemangkasan: Potong cabang yang mati atau tidak sehat untuk merangsang pertumbuhan baru.\n\n</item>
+
+        <item>Penyiraman: Air tanaman stroberi secara teratur untuk menjaga tanah tetap lembab. Hindari menyiram daun.\n\nCahaya: Stroberi membutuhkan cahaya matahari penuh selama setidaknya 6-8 jam sehari. Pastikan tanaman mendapatkan cukup cahaya matahari.\n\nPemupukan: Beri pupuk khusus tanaman berbuah setiap 2-4 minggu selama musim tumbuh.\n\nPemangkasan: Potong daun dan cabang yang mati atau tidak produktif.\n\n</item>
+
+        <item>Penyiraman: Air tanaman salvia ketika lapisan atas tanah sudah kering. Hindari penyiraman berlebihan.\n\nCahaya: Salvia membutuhkan sinar matahari penuh selama setidaknya 6-8 jam sehari. Pastikan mendapatkan cukup cahaya matahari.\n\nPemupukan: Beri pupuk dengan dosis seimbang setiap 4-6 minggu selama musim tumbuh.\n\nPemangkasan: Potong bunga mati dan daun yang tidak diinginkan untuk merangsang pertumbuhan baru.</item>
+
+    </string-array>
+</resources>

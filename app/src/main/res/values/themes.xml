@@ -1,0 +1,101 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Tanamanio" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- primary brand color-->
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <style name="TextHeading">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextHeading.FirstHeadline">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextHeading.SecondHeadline">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextHeading.ThirdHeadline">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextHeadingSecondary">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextHeadingSecondary.WeightSemiBold">
+        <item name="fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="TextHeadingSecondary.WeightSemiBold.Gray">
+        <item name="android:textColor">@color/dark_gray</item>
+    </style>
+
+    <style name="TextHeadingSecondary.WeightSemiBold.Green">
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="TextHeadingSecondary.WeightRegular">
+        <item name="fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="TextHeadingSecondary.WeightRegularItalic">
+        <item name="fontFamily">@font/poppins_italic</item>
+    </style>
+
+    <style name="TextHeadingSecondary.WeightRegular.Gray">
+        <item name="android:textColor">@color/dark_gray</item>
+    </style>
+
+    <style name="TextHeadingSecondary.WeightRegularItalic.Gray">
+        <item name="android:textColor">@color/dark_gray</item>
+    </style>
+
+    <style name="TextSubtitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="TextSubtitle.WeightMedium">
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="TextSubtitle.WeightMedium.Gray">
+        <item name="android:textColor">@color/dark_gray</item>
+    </style>
+
+    <style name="TextBody">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextButton.Gold" parent="Widget.Material3.Button.TextButton">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/gold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="IconButton" parent="Widget.Material3.Button.IconButton.Filled">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="IconButton.BgGreen">
+        <item name="android:backgroundTint">@color/green</item>
+        <item name="android:textColor">@color/gold</item>
+    </style>
+
+    <style name="Theme.Tanamanio" parent="Base.Theme.Tanamanio" />
+</resources>
