@@ -89,8 +89,9 @@
 
     <LinearLayout
         android:id="@+id/ll_few_owned_plant"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@+id/btn_see_all_owned_plant"
         app:layout_constraintStart_toStartOf="@+id/textView4"
