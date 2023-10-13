@@ -15,6 +15,8 @@
     <string name="just_for_you">Khusus untukmu, klik katalog yang sedang kamu cari ya</string>
     <string name="banner_image_of_plant">Banner image of plant</string>
     <string name="dont_have_any_plants">Yah kamu belum memiliki tanaman apapun :(\nYuk cari tanaman yang sesuai dengan keinginanmu</string>
+    <string name="hitz_plant">Tanaman hitz</string>
+    <string name="hitz_plant_description">Cek tanaman yang sedang naik pamornya yuk!</string>
 
     <string-array name="data_name">
         <item>Mawar</item>
