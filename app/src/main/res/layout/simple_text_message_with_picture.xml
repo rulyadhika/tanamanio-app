@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <ImageView
+        android:id="@+id/iv_picture_message"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        tools:srcCompat="@drawable/baseline_person_24"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_message"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_message" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        style="@style/TextSubtitle.WeightMedium.Gray"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_picture_message"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="simple text message" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

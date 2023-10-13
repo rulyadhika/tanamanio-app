@@ -14,6 +14,9 @@
     <string name="search_by_categories">Cari berdasarkan kategori</string>
     <string name="just_for_you">Khusus untukmu, klik katalog yang sedang kamu cari ya</string>
     <string name="banner_image_of_plant">Banner image of plant</string>
+    <string name="dont_have_any_plants">Yah kamu belum memiliki tanaman apapun :(\nYuk cari tanaman yang sesuai dengan keinginanmu</string>
+    <string name="hitz_plant">Tanaman hitz</string>
+    <string name="hitz_plant_description">Cek tanaman yang sedang naik pamornya yuk!</string>
 
     <string-array name="data_name">
         <item>Mawar</item>
@@ -189,5 +192,17 @@
 
         <item>Penyiraman: Air tanaman salvia ketika lapisan atas tanah sudah kering. Hindari penyiraman berlebihan.\n\nCahaya: Salvia membutuhkan sinar matahari penuh selama setidaknya 6-8 jam sehari. Pastikan mendapatkan cukup cahaya matahari.\n\nPemupukan: Beri pupuk dengan dosis seimbang setiap 4-6 minggu selama musim tumbuh.\n\nPemangkasan: Potong bunga mati dan daun yang tidak diinginkan untuk merangsang pertumbuhan baru.</item>
 
+    </string-array>
+
+    <string-array name="data_plant_category_name">
+        <item>Tanaman Hias</item>
+        <item>Sayuran</item>
+        <item>Buah</item>
+    </string-array>
+
+    <string-array name="data_plant_category_image">
+        <item>@drawable/potted_plant</item>
+        <item>@drawable/lettuce</item>
+        <item>@drawable/plant_tree</item>
     </string-array>
 </resources>
