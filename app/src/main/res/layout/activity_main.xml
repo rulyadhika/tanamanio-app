@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    android:paddingBottom="16dp">
+    android:paddingBottom="16dp"
+    android:scrollbars="none">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -75,7 +76,10 @@
         <TextView
             android:id="@+id/textView6"
             style="@style/TextHeadingSecondary.WeightRegular.Gray"
+            android:layout_width="0dp"
+            android:layout_marginEnd="16dp"
             android:text="@string/just_for_you"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textView5"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -96,7 +100,7 @@
             android:layout_marginTop="10dp"
             android:scrollbars="none"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6">
 
             <LinearLayout
@@ -112,13 +116,16 @@
             style="@style/TextHeading.SecondHeadline"
             android:layout_marginTop="20dp"
             android:text="@string/hitz_plant"
-            app:layout_constraintStart_toStartOf="@+id/hsv_plant_category"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
             app:layout_constraintTop_toBottomOf="@+id/hsv_plant_category" />
 
         <TextView
             android:id="@+id/textView8"
             style="@style/TextHeadingSecondary.WeightRegular.Gray"
+            android:layout_width="0dp"
+            android:layout_marginEnd="16dp"
             android:text="@string/hitz_plant_description"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textView7"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -142,7 +149,7 @@
             android:layout_marginTop="10dp"
             android:scrollbars="none"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/textView8"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8">
 
             <LinearLayout
