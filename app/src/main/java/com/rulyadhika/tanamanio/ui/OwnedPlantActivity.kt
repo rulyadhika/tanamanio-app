@@ -1,16 +1,17 @@
 package com.rulyadhika.tanamanio
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.snackbar.Snackbar
 
-class OwnedPlantActivity : AppCompatActivity(), View.OnClickListener {
-    private lateinit var rvPlantList:RecyclerView
-    private lateinit var btnBack: Button
-    private var list =ArrayList<Plant>()
+class OwnedPlantActivity : AppCompatActivity() {
+    private lateinit var rvPlantList: RecyclerView
+    private var list = ArrayList<Plant>()
+
+    private lateinit var topAppBar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,12 +23,20 @@ class OwnedPlantActivity : AppCompatActivity(), View.OnClickListener {
         list.addAll(getListPlants())
         showRecyclerList()
 
-        btnBack = findViewById(R.id.btn_back)
-
-        btnBack.setOnClickListener(this)
+        topAppBar = findViewById(R.id.top_app_bar)
+        topAppBar.setNavigationOnClickListener { onBackPressed() }
+        topAppBar.setOnMenuItemClickListener { itemMenu ->
+            when (itemMenu?.itemId) {
+                R.id.searchButton -> {
+                    Snackbar.make(topAppBar, "You clicked on search button", Snackbar.LENGTH_SHORT).show()
+                    true
+                }
+                else -> false
+            }
+        }
     }
 
-    private fun getListPlants():ArrayList<Plant>{
+    private fun getListPlants(): ArrayList<Plant> {
         val dataName = resources.getStringArray(R.array.data_name)
         val dataLatinaName = resources.getStringArray(R.array.data_latina_name)
         val dataDescription = resources.getStringArray(R.array.data_description)
@@ -38,7 +47,7 @@ class OwnedPlantActivity : AppCompatActivity(), View.OnClickListener {
 
         val listPlant = ArrayList<Plant>()
 
-        for (i in dataName.indices){
+        for (i in dataName.indices) {
             val plant = Plant(
                 dataName[i],
                 dataLatinaName[i],
@@ -54,15 +63,9 @@ class OwnedPlantActivity : AppCompatActivity(), View.OnClickListener {
         return listPlant
     }
 
-    private fun showRecyclerList():Unit{
+    private fun showRecyclerList(): Unit {
         rvPlantList.layoutManager = LinearLayoutManager(this)
         val plantListAdapter = ListPlantAdapter(list)
         rvPlantList.adapter = plantListAdapter
-    }
-
-    override fun onClick(v: View?) {
-        when (v?.id) {
-            R.id.btn_back -> onBackPressed()
-        }
     }
 }
