@@ -17,6 +17,8 @@
     <string name="dont_have_any_plants">Yah kamu belum memiliki tanaman apapun :(\nYuk cari tanaman yang sesuai dengan keinginanmu</string>
     <string name="hitz_plant">Tanaman hitz</string>
     <string name="hitz_plant_description">Cek tanaman yang sedang naik pamornya yuk!</string>
+    <string name="search">Pencarian</string>
+    <string name="content_description_search">Cari Tanaman</string>
 
     <string-array name="data_name">
         <item>Mawar</item>
