@@ -19,6 +19,11 @@
     <string name="hitz_plant_description">Cek tanaman yang sedang naik pamornya yuk!</string>
     <string name="search">Pencarian</string>
     <string name="content_description_search">Cari Tanaman</string>
+    <string name="plant_detail">Detail Tanaman</string>
+    <string name="favourite">Favorit</string>
+    <string name="content_description_favourite">Favoritkan Tanaman</string>
+    <string name="collection">Koleksi</string>
+    <string name="content_description_collection">Koleksikan Tanaman</string>
 
     <string-array name="data_name">
         <item>Mawar</item>
