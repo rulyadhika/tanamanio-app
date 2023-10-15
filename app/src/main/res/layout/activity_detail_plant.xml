@@ -1,100 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    tools:context=".DetailPlantActivity"
-    android:scrollbars="none">
+    android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.core.widget.NestedScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        tools:context=".DetailPlantActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_detail_main_banner"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/banner_image_of_plant"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/TextHeading.FirstHeadline"
+                android:layout_width="220dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_detail_main_banner"
+                tools:text="Nama Tanaman" />
+
+            <TextView
+                android:id="@+id/tv_detail_title"
+                style="@style/TextHeadingSecondary.WeightRegularItalic.Gray"
+                app:layout_constraintStart_toStartOf="@+id/tv_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                tools:text="Nama Latin Tanaman" />
+
+
+            <TextView
+                android:id="@+id/tv_description_title"
+                style="@style/TextHeading.SecondHeadline"
+                android:layout_marginTop="15dp"
+                android:text="@string/description"
+                app:layout_constraintStart_toStartOf="@+id/tv_detail_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_detail_title" />
+
+            <TextView
+                android:id="@+id/tv_description"
+                style="@style/TextBody"
+                android:layout_width="0dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_description_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_description_title"
+                tools:text="Deskripsi Data" />
+
+            <TextView
+                android:id="@+id/tv_difficulty"
+                style="@style/TextHeadingSecondary.WeightSemiBold.Gray"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_title"
+                tools:text="Tingkat Kesulitan" />
+
+            <TextView
+                android:id="@+id/tv_how_to_care_title"
+                style="@style/TextHeading.SecondHeadline"
+                android:layout_marginTop="15dp"
+                android:text="@string/how_to_care"
+                app:layout_constraintStart_toStartOf="@+id/tv_description"
+                app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+            <TextView
+                android:id="@+id/tv_how_to_care"
+                style="@style/TextBody"
+                android:layout_width="0dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_how_to_care_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_how_to_care_title"
+                tools:text="Info Cara Merawat" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:contentDescription="@string/banner_image_of_plant"
-            android:id="@+id/iv_detail_main_banner"
-            android:layout_width="0dp"
-            android:layout_height="300dp"
-            android:scaleType="centerCrop"
-            android:adjustViewBounds="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/top_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_scrollEffect="compress"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:menu="@menu/top_app_bar_with_favourite_and_collection_icon"
+            app:navigationIcon="@drawable/ic_back"
+            app:navigationIconTint="@color/green"
+            app:title="@string/plant_detail"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/TextHeading.ThirdHeadline" />
 
-        <Button
-            android:id="@+id/btn_back"
-            style="@style/IconButton.BgGreen"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            app:icon="@drawable/baseline_chevron_left_24"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-        <TextView
-            android:id="@+id/tv_title"
-            style="@style/TextHeading.FirstHeadline"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_width="220dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_detail_main_banner"
-            tools:text="Nama Tanaman" />
-
-        <TextView
-            android:id="@+id/tv_detail_title"
-            style="@style/TextHeadingSecondary.WeightRegularItalic.Gray"
-            app:layout_constraintStart_toStartOf="@+id/tv_title"
-            app:layout_constraintTop_toBottomOf="@+id/tv_title"
-            tools:text="Nama Latin Tanaman" />
-
-
-        <TextView
-            android:id="@+id/tv_description_title"
-            style="@style/TextHeading.SecondHeadline"
-            android:layout_marginTop="15dp"
-            android:text="@string/description"
-            app:layout_constraintStart_toStartOf="@+id/tv_detail_title"
-            app:layout_constraintTop_toBottomOf="@+id/tv_detail_title" />
-
-        <TextView
-            android:id="@+id/tv_description"
-            style="@style/TextBody"
-            android:layout_width="0dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/tv_description_title"
-            app:layout_constraintTop_toBottomOf="@+id/tv_description_title"
-            tools:text="Deskripsi Data" />
-
-        <TextView
-            android:id="@+id/tv_difficulty"
-            style="@style/TextHeadingSecondary.WeightSemiBold.Gray"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tv_title"
-            tools:text="Tingkat Kesulitan" />
-
-        <TextView
-            android:id="@+id/tv_how_to_care_title"
-            android:layout_marginTop="15dp"
-            android:text="@string/how_to_care"
-            style="@style/TextHeading.SecondHeadline"
-            app:layout_constraintStart_toStartOf="@+id/tv_description"
-            app:layout_constraintTop_toBottomOf="@+id/tv_description" />
-
-        <TextView
-            android:id="@+id/tv_how_to_care"
-            style="@style/TextBody"
-            android:layout_width="0dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/tv_how_to_care_title"
-            app:layout_constraintTop_toBottomOf="@+id/tv_how_to_care_title"
-            tools:text="Info Cara Merawat" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
