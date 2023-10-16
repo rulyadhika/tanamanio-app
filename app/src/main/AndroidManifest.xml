@@ -24,9 +24,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AboutActivity"
-            android:exported="false" />
-        <activity
             android:name=".DetailPlantActivity"
             android:exported="false" />
         <activity
