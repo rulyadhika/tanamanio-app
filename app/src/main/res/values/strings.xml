@@ -212,4 +212,9 @@
         <item>@drawable/lettuce</item>
         <item>@drawable/plant_tree</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profile">Profil</string>
+    <string name="home">Beranda</string>
+    <string name="shop">Shop</string>
 </resources>
