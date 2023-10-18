@@ -1,17 +1,22 @@
 package com.rulyadhika.tanamanio
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.snackbar.Snackbar
 
 class OwnedPlantActivity : AppCompatActivity() {
     private lateinit var rvPlantList: RecyclerView
-    private var list = ArrayList<Plant>()
+    private var baseList = ArrayList<Plant>()
+    private var processedList = ArrayList<Plant>()
+
+    private lateinit var plantListAdapter: ListPlantAdapter
 
     private lateinit var topAppBar: Toolbar
+    private lateinit var topAppBarSearchView: SearchView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,17 +25,51 @@ class OwnedPlantActivity : AppCompatActivity() {
         rvPlantList = findViewById(R.id.rv_owned_plant_list)
         rvPlantList.setHasFixedSize(true)
 
-        list.addAll(getListPlants())
+        baseList.addAll(getListPlants())
+        processedList.addAll(baseList)
         showRecyclerList()
 
         topAppBar = findViewById(R.id.top_app_bar)
+
+        topAppBarSearchView = findViewById(R.id.search_view)
+
+        topAppBarSearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                // Handle search submission
+                Log.d("log_search_field_submitted", "true")
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                // Handle search text change
+                Log.d("log_search_field_value_is_changed", "true")
+
+                if (newText != null) {
+                    val filteredData = baseList.filter {
+                        it.plantName.contains(
+                            newText.toString(),
+                            ignoreCase = true
+                        )
+                    } as ArrayList<Plant>
+
+                    processedList.clear()
+                    processedList.addAll(filteredData)
+
+                    plantListAdapter.notifyDataSetChanged()
+                }
+
+                return true
+            }
+        })
+
         topAppBar.setNavigationOnClickListener { onBackPressed() }
         topAppBar.setOnMenuItemClickListener { itemMenu ->
             when (itemMenu?.itemId) {
-                R.id.searchButton -> {
-                    Snackbar.make(topAppBar, "You clicked on search button", Snackbar.LENGTH_SHORT).show()
+                R.id.manageButton -> {
+                    Log.d("log_manage_button_is_clicked", "true")
                     true
                 }
+
                 else -> false
             }
         }
@@ -65,7 +104,7 @@ class OwnedPlantActivity : AppCompatActivity() {
 
     private fun showRecyclerList(): Unit {
         rvPlantList.layoutManager = LinearLayoutManager(this)
-        val plantListAdapter = ListPlantAdapter(list)
+        plantListAdapter = ListPlantAdapter(processedList)
         rvPlantList.adapter = plantListAdapter
     }
 }

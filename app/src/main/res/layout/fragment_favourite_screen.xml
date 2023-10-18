@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OwnedPlantActivity">
+    tools:context=".ui.FavouriteScreenFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_owned_plant_list"
+        android:id="@+id/rv_favourite_plant_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -28,14 +28,16 @@
             app:menu="@menu/top_app_bar_with_search_icon"
             app:navigationIcon="@drawable/ic_back"
             app:navigationIconTint="@color/green"
-            app:title="@string/your_plants"
+            app:title="@string/your_favourite_plants"
             app:titleCentered="true"
             app:titleTextAppearance="@style/TextHeading.ThirdHeadline">
+
             <androidx.appcompat.widget.SearchView
                 android:id="@+id/search_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"/>
+                android:layout_gravity="end"
+                android:visibility="gone" />
         </com.google.android.material.appbar.MaterialToolbar>
 
     </com.google.android.material.appbar.AppBarLayout>

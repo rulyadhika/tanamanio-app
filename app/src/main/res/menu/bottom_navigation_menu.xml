@@ -18,9 +18,9 @@
         android:title="@string/shop" />
 
     <item
-        android:id="@+id/favorite"
+        android:id="@+id/favourite"
         android:enabled="true"
-        android:icon="@drawable/ic_favourite_border"
+        android:icon="@drawable/favourite_icon_selector"
         android:title="@string/favourite" />
 
     <item
