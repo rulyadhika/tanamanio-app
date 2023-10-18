@@ -217,4 +217,7 @@
     <string name="profile">Profil</string>
     <string name="home">Beranda</string>
     <string name="shop">Shop</string>
+    <string name="your_favourite_plants">Tanaman Favoritmu</string>
+    <string name="manage">Kelola</string>
+    <string name="manage_content">Manage Content</string>
 </resources>

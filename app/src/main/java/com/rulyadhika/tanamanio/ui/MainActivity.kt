@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.rulyadhika.tanamanio.ui.FavouriteScreenFragment
 import com.rulyadhika.tanamanio.ui.MainScreenFragment
 import com.rulyadhika.tanamanio.ui.ProfileFragment
 
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         val mainScreenFragment: Fragment = MainScreenFragment()
         val profileFragment: Fragment = ProfileFragment()
+        val favouriteFragment:Fragment = FavouriteScreenFragment()
 
         setCurrentFragment(mainScreenFragment)
 
@@ -29,6 +31,10 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.profile->{
                     setCurrentFragment(profileFragment)
+                    true
+                }
+                R.id.favourite->{
+                    setCurrentFragment(favouriteFragment)
                     true
                 }
                 else -> false

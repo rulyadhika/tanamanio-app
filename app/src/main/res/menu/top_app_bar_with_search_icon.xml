@@ -2,9 +2,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:icon="@drawable/ic_search"
-        android:id="@+id/searchButton"
-        android:title="@string/search"
-        android:contentDescription="@string/content_description_search"
-        app:showAsAction="always" />
+        android:id="@+id/manageButton"
+        android:title="@string/manage"
+        android:contentDescription="@string/manage_content"
+        app:showAsAction="collapseActionView"
+        />
 </menu>
