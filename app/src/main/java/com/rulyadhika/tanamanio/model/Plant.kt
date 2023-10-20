@@ -5,6 +5,8 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Plant(
+    val itemId : Int,
+    val plantId : String,
     val plantName:String,
     val plantLatinaName:String,
     val plantDescription:String,

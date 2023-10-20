@@ -18,7 +18,7 @@ class OwnedPlantActivity : AppCompatActivity() {
     private lateinit var topAppBar: Toolbar
     private lateinit var topAppBarSearchView: SearchView
 
-    private var listSelectedItem= ArrayList<Int>()
+    private var listSelectedItem= ArrayList<Long>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,6 +82,11 @@ class OwnedPlantActivity : AppCompatActivity() {
                     Log.d("log_delete_button_is_clicked", "true")
                     Log.d("log_result_selected_item", listSelectedItem.toString())
 
+                    for(itemId in listSelectedItem){
+                        processedList.removeIf{it.itemId == itemId.toInt()}
+                    }
+
+                    plantListAdapter.notifyDataSetChanged()
                     true
                 }
 
@@ -91,6 +96,7 @@ class OwnedPlantActivity : AppCompatActivity() {
     }
 
     private fun getListPlants(): ArrayList<Plant> {
+        val dataId = resources.getStringArray(R.array.data_id)
         val dataName = resources.getStringArray(R.array.data_name)
         val dataLatinaName = resources.getStringArray(R.array.data_latina_name)
         val dataDescription = resources.getStringArray(R.array.data_description)
@@ -103,6 +109,8 @@ class OwnedPlantActivity : AppCompatActivity() {
 
         for (i in dataName.indices) {
             val plant = Plant(
+                i,
+                dataId[i],
                 dataName[i],
                 dataLatinaName[i],
                 dataDescription[i],
@@ -123,7 +131,7 @@ class OwnedPlantActivity : AppCompatActivity() {
         rvPlantList.adapter = plantListAdapter
     }
 
-    private fun getSelectedItem(data : List<Int>){
+    private fun getSelectedItem(data : List<Long>){
         Log.d("log_result_selected_data_is_updated", "true")
 
         listSelectedItem.clear()
