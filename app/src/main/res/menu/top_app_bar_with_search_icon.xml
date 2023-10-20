@@ -7,4 +7,10 @@
         android:contentDescription="@string/manage_content"
         app:showAsAction="collapseActionView"
         />
+
+    <item
+        android:id="@+id/deleteButton"
+        android:title="Hapus"
+        app:showAsAction="collapseActionView"
+        />
 </menu>

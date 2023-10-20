@@ -18,6 +18,8 @@ class OwnedPlantActivity : AppCompatActivity() {
     private lateinit var topAppBar: Toolbar
     private lateinit var topAppBarSearchView: SearchView
 
+    private var listSelectedItem= ArrayList<Int>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_owned_plant)
@@ -32,6 +34,7 @@ class OwnedPlantActivity : AppCompatActivity() {
         topAppBar = findViewById(R.id.top_app_bar)
 
         topAppBarSearchView = findViewById(R.id.search_view)
+        topAppBarSearchView.queryHint = getString(R.string.search_your_plant)
 
         topAppBarSearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -66,7 +69,19 @@ class OwnedPlantActivity : AppCompatActivity() {
         topAppBar.setOnMenuItemClickListener { itemMenu ->
             when (itemMenu?.itemId) {
                 R.id.manageButton -> {
-                    Log.d("log_manage_button_is_clicked", "true")
+                    val manageListState = plantListAdapter.setManageListState()
+                    Log.d("log_manage_button_state", manageListState.toString())
+
+                    if(!manageListState){
+                        plantListAdapter.notifyDataSetChanged()
+                    }
+                    true
+                }
+
+                R.id.deleteButton -> {
+                    Log.d("log_delete_button_is_clicked", "true")
+                    Log.d("log_result_selected_item", listSelectedItem.toString())
+
                     true
                 }
 
@@ -102,9 +117,16 @@ class OwnedPlantActivity : AppCompatActivity() {
         return listPlant
     }
 
-    private fun showRecyclerList(): Unit {
+    private fun showRecyclerList() {
         rvPlantList.layoutManager = LinearLayoutManager(this)
-        plantListAdapter = ListPlantAdapter(processedList)
+        plantListAdapter = ListPlantAdapter(processedList){result -> getSelectedItem(result)}
         rvPlantList.adapter = plantListAdapter
+    }
+
+    private fun getSelectedItem(data : List<Int>){
+        Log.d("log_result_selected_data_is_updated", "true")
+
+        listSelectedItem.clear()
+        listSelectedItem.addAll(data)
     }
 }

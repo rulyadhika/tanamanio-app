@@ -11,5 +11,6 @@ data class Plant(
     val plantCategory: String,
     val plantDifficulty: String,
     val plantPicture: String,
-    val plantHowToCare: String
+    val plantHowToCare: String,
+    var isSelected: Boolean = false
 ) : Parcelable
