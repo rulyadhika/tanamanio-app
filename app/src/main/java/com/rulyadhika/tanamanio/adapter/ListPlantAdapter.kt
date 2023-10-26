@@ -49,13 +49,15 @@ class ListPlantAdapter(
         holder.itemCategory.text = category
         holder.itemDifficulty.text = difficulty
 
-
-        if (isSelected) {
-            holder.clCheckboxSelectedItemWrapper.visibility = View.VISIBLE
-        } else {
+        if(manageListState){
+            if (isSelected) {
+                holder.clCheckboxSelectedItemWrapper.visibility = View.VISIBLE
+            } else {
+                holder.clCheckboxSelectedItemWrapper.visibility = View.GONE
+            }
+        }else{
             holder.clCheckboxSelectedItemWrapper.visibility = View.GONE
         }
-
 
         holder.itemView.setOnClickListener {
             if (!manageListState) {

@@ -18,7 +18,7 @@ class OwnedPlantActivity : AppCompatActivity() {
     private lateinit var topAppBar: Toolbar
     private lateinit var topAppBarSearchView: SearchView
 
-    private var listSelectedItem= ArrayList<Long>()
+    private var listSelectedItem = ArrayList<Long>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,7 +72,7 @@ class OwnedPlantActivity : AppCompatActivity() {
                     val manageListState = plantListAdapter.setManageListState()
                     Log.d("log_manage_button_state", manageListState.toString())
 
-                    if(!manageListState){
+                    if (!manageListState) {
                         plantListAdapter.notifyDataSetChanged()
                     }
                     true
@@ -82,8 +82,10 @@ class OwnedPlantActivity : AppCompatActivity() {
                     Log.d("log_delete_button_is_clicked", "true")
                     Log.d("log_result_selected_item", listSelectedItem.toString())
 
-                    for(itemId in listSelectedItem){
-                        processedList.removeIf{it.itemId == itemId.toInt()}
+                    if (listSelectedItem.size > 0) {
+                        for (itemId in listSelectedItem) {
+                            processedList.removeIf { it.itemId == itemId.toInt() }
+                        }
                     }
 
                     plantListAdapter.notifyDataSetChanged()
@@ -127,11 +129,11 @@ class OwnedPlantActivity : AppCompatActivity() {
 
     private fun showRecyclerList() {
         rvPlantList.layoutManager = LinearLayoutManager(this)
-        plantListAdapter = ListPlantAdapter(processedList){result -> getSelectedItem(result)}
+        plantListAdapter = ListPlantAdapter(processedList) { result -> getSelectedItem(result) }
         rvPlantList.adapter = plantListAdapter
     }
 
-    private fun getSelectedItem(data : List<Long>){
+    private fun getSelectedItem(data: List<Long>) {
         Log.d("log_result_selected_data_is_updated", "true")
 
         listSelectedItem.clear()
