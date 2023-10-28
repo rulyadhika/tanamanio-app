@@ -96,14 +96,16 @@ class ListPlantAdapter(
         Log.d("log_itemViewSelectedWhileManageListIsTrue", listSelectedData.toString())
     }
 
-    fun setManageListState(): Boolean {
-        manageListState = !manageListState
+    fun getManageListState():Boolean {
+        return manageListState
+    }
+
+    fun setManageListState(state:Boolean) {
+        manageListState = state
 
         if (!manageListState) {
            resetSelectedItem()
         }
-
-        return manageListState
     }
 
     fun resetSelectedItem(){

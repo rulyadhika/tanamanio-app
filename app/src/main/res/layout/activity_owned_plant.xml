@@ -25,7 +25,7 @@
             android:minHeight="?attr/actionBarSize"
             app:layout_scrollEffect="compress"
             app:layout_scrollFlags="scroll|enterAlways|snap"
-            app:menu="@menu/top_app_bar_with_search_icon"
+            app:menu="@menu/top_app_bar_with_manage_and_delete_icon"
             app:navigationIcon="@drawable/ic_back"
             app:navigationIconTint="@color/green"
             app:title="@string/your_plants"
@@ -44,7 +44,7 @@
             style="@style/TextHeadingSecondary.WeightSemiBold"
             android:layout_marginHorizontal="16dp"
             android:layout_marginVertical="8dp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="@string/selected_item_counter"/>
     </com.google.android.material.appbar.AppBarLayout>
