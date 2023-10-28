@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:visible="false"
+        android:id="@+id/deleteButton"
+        android:title="Hapus"
+        android:icon="@drawable/ic_delete"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/manageButton"
+        android:contentDescription="@string/manage_content"
+        android:title="@string/manage"
+        app:showAsAction="collapseActionView" />
+</menu>

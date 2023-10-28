@@ -25,6 +25,24 @@
     <string name="collection">Koleksi</string>
     <string name="content_description_collection">Koleksikan Tanaman</string>
 
+    <string-array name="data_id">
+        <item>43a0451a-399d-4cf1-8c0e-8f72d87622a6</item>
+        <item>7f4b3e9f-2b13-4c27-985f-645819d3a99c</item>
+        <item>02c8f6e5-6a85-42b3-90a3-14e12c196d0e</item>
+        <item>c9f0f16d-d5be-4658-9e92-8939a18c45ab</item>
+        <item>a6fbfa60-953c-48b9-afde-2bba1ec7e321</item>
+        <item>d3dcb0e7-1c52-4746-981c-ebe68d27ad6c</item>
+        <item>0b51aa3c-9d4e-4df7-a4a2-17e6344f0be0</item>
+        <item>98bf7bf5-6e5e-4e9c-ae2f-7d45ea9c719a</item>
+        <item>25669f53-3a7d-492c-96ab-492d83a8db51</item>
+        <item>1b8a0f75-c9d3-4a0f-8dd9-695dbb777347</item>
+        <item>f3665770-984d-4f3c-b819-6c272fe83a93</item>
+        <item>a183a1f7-3fb5-40d3-8e4e-59ac3c84a12c</item>
+        <item>6d35ee51-2f84-4a0f-8b02-5e2ab04ea0c0</item>
+        <item>e7084783-eb01-481a-9b98-930617c6d6bf</item>
+        <item>9a2b7e8b-100c-4d07-8c50-52a13ab0a116</item>
+    </string-array>
+
     <string-array name="data_name">
         <item>Mawar</item>
         <item>Anggrek Phalaenopsis</item>
@@ -220,4 +238,6 @@
     <string name="your_favourite_plants">Tanaman Favoritmu</string>
     <string name="manage">Kelola</string>
     <string name="manage_content">Manage Content</string>
+    <string name="search_your_plant">Cari Tanaman Milikmu</string>
+    <string name="selected_item_counter">Item Dipilih : 0</string>
 </resources>

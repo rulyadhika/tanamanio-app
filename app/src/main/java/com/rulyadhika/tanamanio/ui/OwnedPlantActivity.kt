@@ -2,11 +2,14 @@ package com.rulyadhika.tanamanio
 
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
+import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
-import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.appbar.MaterialToolbar
 
 class OwnedPlantActivity : AppCompatActivity() {
     private lateinit var rvPlantList: RecyclerView
@@ -15,8 +18,29 @@ class OwnedPlantActivity : AppCompatActivity() {
 
     private lateinit var plantListAdapter: ListPlantAdapter
 
-    private lateinit var topAppBar: Toolbar
+    private lateinit var topAppBar: MaterialToolbar
     private lateinit var topAppBarSearchView: SearchView
+
+    private lateinit var tvSelectedItemCounter: TextView
+
+    private lateinit var btnDelete: MenuItem
+
+    private var listSelectedItem = ArrayList<Long>()
+
+    override fun onBackPressed() {
+        if (!topAppBarSearchView.isIconified) {
+            //when search bar is not expanded
+            topAppBarSearchView.isIconified = true
+        } else {
+            if (plantListAdapter.getManageListState()) {
+                plantListAdapter.setManageListState(false)
+
+                resetViewSelectItem()
+            } else {
+                super.onBackPressed()
+            }
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,8 +54,12 @@ class OwnedPlantActivity : AppCompatActivity() {
         showRecyclerList()
 
         topAppBar = findViewById(R.id.top_app_bar)
+        tvSelectedItemCounter = findViewById(R.id.tv_selected_item_counter)
 
         topAppBarSearchView = findViewById(R.id.search_view)
+        topAppBarSearchView.queryHint = getString(R.string.search_your_plant)
+
+        btnDelete = topAppBar.menu.findItem(R.id.deleteButton)
 
         topAppBarSearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -63,10 +91,46 @@ class OwnedPlantActivity : AppCompatActivity() {
         })
 
         topAppBar.setNavigationOnClickListener { onBackPressed() }
+
         topAppBar.setOnMenuItemClickListener { itemMenu ->
             when (itemMenu?.itemId) {
                 R.id.manageButton -> {
-                    Log.d("log_manage_button_is_clicked", "true")
+                    plantListAdapter.setManageListState(!plantListAdapter.getManageListState())
+
+                    val manageListState = plantListAdapter.getManageListState()
+                    Log.d("log_manage_button_state", manageListState.toString())
+
+                    if (manageListState) {
+                        tvSelectedItemCounter.visibility = View.VISIBLE
+                        tvSelectedItemCounter.text =
+                            resources.getString(R.string.selected_item_counter)
+
+                        topAppBar.isTitleCentered = false
+                        btnDelete.isVisible = true
+                    } else {
+                        resetViewSelectItem()
+                    }
+
+                    true
+                }
+
+                R.id.deleteButton -> {
+                    Log.d("log_delete_button_is_clicked", "true")
+                    Log.d("log_result_selected_item", listSelectedItem.toString())
+
+                    if (listSelectedItem.size > 0) {
+                        for (itemId in listSelectedItem) {
+                            processedList.removeIf { it.itemId == itemId.toInt() }
+                        }
+
+                        listSelectedItem.clear()
+                    }
+
+                    plantListAdapter.resetSelectedItem()
+
+                    tvSelectedItemCounter.text = "Item Dipilih : ${listSelectedItem.size}"
+
+                    plantListAdapter.notifyDataSetChanged()
                     true
                 }
 
@@ -76,6 +140,7 @@ class OwnedPlantActivity : AppCompatActivity() {
     }
 
     private fun getListPlants(): ArrayList<Plant> {
+        val dataId = resources.getStringArray(R.array.data_id)
         val dataName = resources.getStringArray(R.array.data_name)
         val dataLatinaName = resources.getStringArray(R.array.data_latina_name)
         val dataDescription = resources.getStringArray(R.array.data_description)
@@ -88,6 +153,8 @@ class OwnedPlantActivity : AppCompatActivity() {
 
         for (i in dataName.indices) {
             val plant = Plant(
+                i,
+                dataId[i],
                 dataName[i],
                 dataLatinaName[i],
                 dataDescription[i],
@@ -102,9 +169,26 @@ class OwnedPlantActivity : AppCompatActivity() {
         return listPlant
     }
 
-    private fun showRecyclerList(): Unit {
+    private fun showRecyclerList() {
         rvPlantList.layoutManager = LinearLayoutManager(this)
-        plantListAdapter = ListPlantAdapter(processedList)
+        plantListAdapter = ListPlantAdapter(processedList) { result -> getSelectedItem(result) }
         rvPlantList.adapter = plantListAdapter
+    }
+
+    private fun getSelectedItem(data: List<Long>) {
+        Log.d("log_result_selected_data_is_updated", "true")
+
+        listSelectedItem.clear()
+        listSelectedItem.addAll(data)
+
+        tvSelectedItemCounter.text = "Item Dipilih : ${listSelectedItem.size}"
+    }
+
+    private fun resetViewSelectItem() {
+        tvSelectedItemCounter.visibility = View.GONE
+
+        topAppBar.isTitleCentered = true
+        btnDelete.isVisible = false
+        plantListAdapter.notifyDataSetChanged()
     }
 }

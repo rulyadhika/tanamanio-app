@@ -137,6 +137,7 @@ class MainScreenFragment : Fragment(), View.OnClickListener {
     }
 
     private fun getFewOwnedPlants(): ArrayList<Plant> {
+        val dataId = resources.getStringArray(R.array.data_id)
         val dataName = resources.getStringArray(R.array.data_name)
         val dataLatinaName = resources.getStringArray(R.array.data_latina_name)
         val dataDescription = resources.getStringArray(R.array.data_description)
@@ -150,6 +151,8 @@ class MainScreenFragment : Fragment(), View.OnClickListener {
         for (i in dataName.indices) {
             if (i < 3) {
                 val plant = Plant(
+                    i,
+                    dataId[i],
                     dataName[i],
                     dataLatinaName[i],
                     dataDescription[i],
@@ -183,6 +186,7 @@ class MainScreenFragment : Fragment(), View.OnClickListener {
     }
 
     private fun getFewHitzPlants(): ArrayList<Plant> {
+        val dataId = resources.getStringArray(R.array.data_id)
         val dataName = resources.getStringArray(R.array.data_name)
         val dataLatinaName = resources.getStringArray(R.array.data_latina_name)
         val dataDescription = resources.getStringArray(R.array.data_description)
@@ -196,6 +200,8 @@ class MainScreenFragment : Fragment(), View.OnClickListener {
         for (i in dataName.size - 1 downTo 0) {
             if (list.size < 5) {
                 val plant = Plant(
+                    i,
+                    dataId[i],
                     dataName[i],
                     dataLatinaName[i],
                     dataDescription[i],
