@@ -2,6 +2,8 @@ package com.rulyadhika.tanamanio
 
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
@@ -18,6 +20,8 @@ class OwnedPlantActivity : AppCompatActivity() {
     private lateinit var topAppBar: Toolbar
     private lateinit var topAppBarSearchView: SearchView
 
+    private lateinit var tvSelectedItemCounter: TextView
+
     private var listSelectedItem = ArrayList<Long>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +36,7 @@ class OwnedPlantActivity : AppCompatActivity() {
         showRecyclerList()
 
         topAppBar = findViewById(R.id.top_app_bar)
+        tvSelectedItemCounter = findViewById(R.id.tv_selected_item_counter)
 
         topAppBarSearchView = findViewById(R.id.search_view)
         topAppBarSearchView.queryHint = getString(R.string.search_your_plant)
@@ -72,9 +77,15 @@ class OwnedPlantActivity : AppCompatActivity() {
                     val manageListState = plantListAdapter.setManageListState()
                     Log.d("log_manage_button_state", manageListState.toString())
 
-                    if (!manageListState) {
+                    if(manageListState){
+                        tvSelectedItemCounter.visibility = View.VISIBLE
+                        tvSelectedItemCounter.text = resources.getString(R.string.selected_item_counter)
+                    } else{
+                        tvSelectedItemCounter.visibility = View.GONE
+
                         plantListAdapter.notifyDataSetChanged()
                     }
+
                     true
                 }
 
@@ -86,7 +97,13 @@ class OwnedPlantActivity : AppCompatActivity() {
                         for (itemId in listSelectedItem) {
                             processedList.removeIf { it.itemId == itemId.toInt() }
                         }
+
+                        listSelectedItem.clear()
                     }
+
+                    plantListAdapter.resetSelectedItem()
+
+                    tvSelectedItemCounter.text = "Item Dipilih : ${listSelectedItem.size}"
 
                     plantListAdapter.notifyDataSetChanged()
                     true
@@ -138,5 +155,7 @@ class OwnedPlantActivity : AppCompatActivity() {
 
         listSelectedItem.clear()
         listSelectedItem.addAll(data)
+
+        tvSelectedItemCounter.text = "Item Dipilih : ${listSelectedItem.size}"
     }
 }

@@ -83,7 +83,6 @@ class ListPlantAdapter(
             listSelectedData.add(getItemId(position))
 
             holder.clCheckboxSelectedItemWrapper.visibility = View.VISIBLE
-
             listPlant[position].isSelected = true
         } else {
             listSelectedData.remove(getItemId(position))
@@ -101,18 +100,20 @@ class ListPlantAdapter(
         manageListState = !manageListState
 
         if (!manageListState) {
-            if (listSelectedData.size > 0) {
-                Log.d("log_run_1", "true")
-
-                for (position in listSelectedData.indices) {
-                    listPlant[position].isSelected = false
-                }
-
-                listSelectedData.clear()
-                setSelectedItem(listSelectedData)
-            }
+           resetSelectedItem()
         }
 
         return manageListState
+    }
+
+    fun resetSelectedItem(){
+        if (listSelectedData.size > 0) {
+            for (position in listSelectedData.indices) {
+                listPlant[position].isSelected = false
+            }
+
+            listSelectedData.clear()
+            setSelectedItem(listSelectedData)
+        }
     }
 }

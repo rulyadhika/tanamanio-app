@@ -38,5 +38,14 @@
                 android:layout_gravity="end"/>
         </com.google.android.material.appbar.MaterialToolbar>
 
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_selected_item_counter"
+            style="@style/TextHeadingSecondary.WeightSemiBold"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="@string/selected_item_counter"/>
     </com.google.android.material.appbar.AppBarLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
